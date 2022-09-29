@@ -1,0 +1,54 @@
+{% load static %}
+{% load custom_tags %}
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/remixicon.css' %}">
+        <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+        <link rel="stylesheet" href="{% static 'css/meanmenu.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/odometer.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/date-picker.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+        <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+        {% block style %}{% endblock style %}
+        <title>
+            {% block title %}{% endblock title %} - {% setting 'title' %}
+        </title>
+    </head>
+    <body>
+        <div class="preloader">
+            <div class="lds-ripple">
+                <div class="pl-flip-1 pl-flip-2"></div>
+            </div>
+        </div>
+        {% include 'origin/header.j2' %}
+        {% block content %}{% endblock content %}
+        {% include 'origin/footer.j2' %}
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/meanmenu.min.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/wow.min.js' %}"></script>
+        <script src="{% static 'js/appear.min.js' %}"></script>
+        <script src="{% static 'js/odometer.min.js' %}"></script>
+        <script src="{% static 'js/jarallax.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+        <script src="{% static 'js/magnific-popup.min.js' %}"></script>
+        <script src="{% static 'js/form-validator.min.js' %}"></script>
+        <script src="{% static 'js/contact-form-script.js' %}"></script>
+        <script src="{% static 'js/ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+        {% block script %}
+        
+        {% endblock script %}
+    </body>
+</html>

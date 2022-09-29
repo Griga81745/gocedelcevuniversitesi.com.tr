@@ -1,0 +1,26 @@
+{% extends "origin/base.j2" %}
+{% load static %}
+{% block title %}
+    Bölümler
+{% endblock title %}
+{% block content %}
+    <!-- Start Page Title Area -->
+    <div class="page-title-area bg-1">
+        <div class="container">
+            <div class="page-title-content">
+                <h2>About</h2>
+
+                <ul>
+                    <li>
+                        <a href="{% url 'university:home' %}">
+                            Ana Sayfa
+                        </a>
+                    </li>
+
+                    <li class="active">About</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+{% endblock content %}
