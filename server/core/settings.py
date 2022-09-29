@@ -6,7 +6,7 @@ SECRET_KEY = 'django-insecure-5y3zm8pm^dqz+*p(9q@(xmng=4$+72c@qw^do_jav0)2dg3&23
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     "phonenumber_field",
