@@ -1,11 +1,11 @@
 {% load static %}
 {% load custom_tags %}
-<footer class="footer-area black-bg-color">
+<footer class="footer-area black-bg-color py-3">
     <div class="container">
         <div class="row align-items-center justify-content-center">
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-5 col-sm-12">
                 <div class="single-footer-widget bg-f9f5f1">
-                    <a href="index-2.html" class="logo">
+                    <a href="{% url 'university:home' %}" class="logo">
                         <img src="{% static '' %}images/white-logo.png" alt="Image">
                     </a>
                     <p>
@@ -27,35 +27,14 @@
                             <a href="{% url 'university:area-list' %}">Fiyat Listesi</a>
                         </li>
                         <li>
-                            <a href="{% url 'university:faculty-list' %}">Fakülteler</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'university:faq-list' %}">SSS</a>
+                            <a href="{% url 'university:page-kayit-evraklari' %}">Kayıt Evrakları</a>
                         </li>
                         <li>
                             <a href="{% url 'university:post-list' %}">Blog</a>
                         </li>
                         <li>
-                            <a href="{% url 'university:about-us' %}">Üniversitemiz</a>
-                        </li>
-                        <li>
                             <a href="{% url 'university:contact-us' %}">İletişim</a>
                         </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="single-footer-widget">
-                    <h3>
-                        Fakülteler
-                    </h3>
-                    <ul class="import-link">
-                        {% faculties as faculty_list %}
-                        {% for faculty in faculty_list %}
-                            <li>
-                                <a href="{{ faculty.get_absolute_url }}" class="nav-link">{{ faculty.title }}</a>
-                            </li>
-                        {% endfor %}
                     </ul>
                 </div>
             </div>

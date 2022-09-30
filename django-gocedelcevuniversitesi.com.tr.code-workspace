@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "server/core"
+		},
+		{
+			"path": "server/university"
+		},
+		{
+			"path": "server/assets/template"
+		},
+		{
+			"path": ".theme"
+		}
+	],
+	"settings": {}
+}

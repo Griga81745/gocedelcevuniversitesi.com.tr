@@ -1,0 +1,130 @@
+{% extends "origin/base.j2" %}
+
+{% block title %}Üniversitemiz Hakkında{% endblock title %}
+
+{% block content %}
+    <!-- Start Page Title Area -->
+    <div class="page-title-area bg-1">
+        <div class="container">
+            <div class="page-title-content">
+                <h2>Kayıt Evrakları</h2>
+
+                <ul>
+                    <li>
+                        <a href="{% url 'university:home' %}">
+                            Ana Sayfa
+                        </a>
+                    </li>
+
+                    <li class="active">Kayıt Evrakları</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+    <div class="container my-5">
+        <p>
+            Kayıt için gerekli evraklar :
+        </p>
+        <ol>
+            <li>
+                <b>Lise Diploması</b>: Diplomanın aslı; asıl diplomaya “Apostil” onay mühürü yaptırılmalıdır.<br>
+                (Kaymakamlık yada valiliklerden yaptırılabilir. Apostİl mührünün farklı bir kağıda yapılması gecersizdir. Diplomanın olmaması halinde, Diploma Kayıp Belgesi (apostilli olacak ) geçerli olacaktır.
+            </li>
+            <li>
+                <b>Transkript</b>: Her yılın ayrı ayrı ders not dökümünü gösteren çizelge Transkript gerekmektedir. (her yıl için detaylı doldurulması gerekir ve mavi veya kırmızı mühürlü olmalı).
+            </li>
+            <li>
+                <b>Nüfus Kayıt Belgesi (Aslı)</b>
+            </li>
+            <li>
+                <b>İkametgâh (Aslı)</b>
+            </li>
+            <li>
+                <b>Vekaletname</b>: Üniversitemizin Hukuk İşleri sorumlusuna, sizlerin adına Bakanlıklarda işlem yapabilmesi için verilmektedir. Örneğini sitemizden bulabilir Türkiyedeki noterde aynısını yapabilirsiniz.
+            </li>
+        </ol>
+        <p>
+            Yukarıda istenen tüm belgelerin Makedoncaya tercüme edilmesi ve Noterden onaylanması
+            gereklidir. NOT: Tercüme ve Noter onayı Kuzey Makedonya’da yapılacaktır.<br>
+            Bütün istenen belgeler ıslak imzalı, yetkili makam damgası ve imzası ile orjinal olmalıdır. (Onaylanmış fotokopi ve “Aslı Gibidir” ibaresi olan belgeler kabul edilmemektedir.)
+        </p>
+        <p>
+            İstenen orijinal belgeler üzerinde yapılan herhangi bir düzeltme veya kalem işareti Kuzey Makedonya Makamlarınca kabul edilmemektedir.
+        </p>
+        <p>
+            Yukarıda bahsedilen belgelerden bir tanesi bile eksik olsa öğrencinin başvurusu Kuzey Makedonya makamlarınca kabul edilmemektedir. Bütün belgeler aslından tercüme edilmiş olarak 3’er adet çoğaltılmalıdır. E-devlet’ten alınacak belgeler kabul edilmemektedir.
+        </p>
+        <br>
+        <p>
+            Oturma İzni İçin Gereken Belgeler: ( Hepsi apostilli olacak )
+        </p>
+        <ol>
+            <li>
+                <b>Pasaport</b>: Pasaportun en az 15 ay geçerli süresi olmalıdır. Yeşil veya hususi pasaportlara oturma izni alınamaz. Yeşil pasaporta sahip öğrenciler yine de bordo pasaport çıkarmalıdır. Makedonya’da oturum alması için bordo pasaporta sahip olması zorunludur.
+            </li>
+            <li>
+                <b>Adli Sicil Belgesi</b>: Adli sicil belgesinde sözkonusu kişinin doğum tarihinin, gün, ay, yıl olarak tamamı gösterilmesi gerek.( ayrıca Adli sicil kaydı ibaresi ile birlikte Adli Sicil Arşiv kaydı ibaresinin de yazması gerekmektedir ) Apostilli olacak
+            </li>
+            <li>
+                <b>Taahhütname</b>: Evrak sadece Büyükelçiliklerden başvuranlar için ve öğrenci reşit değil ise gerekecek, reşit olanlar ve başvuruyu Kuzey Makedonya’dan yapacak olanlar için gerekmemektedir. Öğrencinin velisi tarafından Türkiye’de noterde, velisi bulunduğu kişinin Kuzey Makedonya’daki ikamet ve eğitim masraflarını karşılayacağını belirtmesi gereken bir belgedir.
+                Apostilli olacak.
+            </li>
+            <li>
+                <b>Sağlık Sigortası – Proviyzon belgesi</b> : Öğrencinin Türkiyede bağlı olduğu sağlık kurumundan sigortalı olduğunu gösteren belge. Sözkonusu belgenin ıslak mühürlü olması gerekir. Eğer öğrenci devlet sigortasını kullanmıyor ise özel sağlık sigortası yapması gerekir. Özel sigorta yapılırken dikkat edilmesi husus sigortada “SEYAHAT” ibaresinin bulunmaması gerekir.
+                (Apostilli olacak).
+                <br>
+                SEYAHAT SAĞLIK SİGORTASI değil sadece ÖZEL SAĞLIK SİGORTA olarak hazırlanması gerekir.
+            </li>
+            <li>
+                <b>Fotoğraf</b>: Biometrik 8 (sekiz) adet fotoğraf. Beyaz tabanlı, uygun kıyafetli ve 3×35 cm ebatlarında olmalıdır.
+            </li>
+            <li>
+                <b>Yurt veya kira sözleşmesi</b>: Bu belge öğrencinin Kuzey Makedonyada ikamet edeceği kurum veya sözleşme yapacağı şahıslar tarafından noter onaylı olacak şekilde hazırlanacaktır. (Belge Makedonca hazırlanacağı için tercümeye gerek kalmayacaktır) Yukarıda belirtilen orjinal belgelerin hepsi Makedoncaya tercüme edilip noterde onaylanması gerekir. Tercüme ve noter işlemleri Kuzey Makedonya Cumhuriyeti’nde yapılacaktır.
+            </li>
+            <li>
+                <b>Sağlık Raporu</b>: Aile hekiminden alınmalıdır.
+            </li>
+        </ol>
+        <p>
+            İşlemleri de tamamlandıktan sonra Üniversite’nin hazırlaması gereken belgeler:
+        </p>
+        <ol>
+            <li>
+                Makedonca Öğrenci Belgesi: Öğrencinin Üniversitede kayıtlı olduğunu gösteren belgedir.
+                Üniversite Öğrenci İşlerinden temin edilir.
+            </li>
+            <li>
+                İngilizce 4 Yıllık Eğitim Program Belgesi: Üniversite tarafından verilir.
+            </li>
+            <li>
+                İngilizce Bildiğine Dair Belge: Öğrencinin İngilizceyi yeterli seviyede bildiğini gösteren belgedir. Üniversite tarafından verilir.
+                Öğrenci kendisi dolduracak, Üniversite Hukuk Ofisinden alınabilir.
+            </li>
+            <li>
+                Vize Başvuru Formu: Öğrenci kendisi dolduracak, Üniversite Hukuk Ofisinden alınabilir.
+            </li>
+        </ol>
+        <p>
+            <b>Not: Bütün evraklar orjınal olmalı ve hepsinde kaşe, mühür bulunmalı.</b>
+        </p>
+        <p>
+            <b>ÖNEMLİ: Vizesi olmayan bir Öğrenci Kuzey Makedonya`ya giriş yaptığı günden itibaren en geç 48 saat içinde, Kuzey Makedonya’da ikamet edeceği yerin en yakın karakoluna giriş yaptığını bildirmesi gerekir (Beyaz karton almasi lazim, ALINMAMASI DURUMUNDA, CEZA ÖNGÖRÜLMEKTEDİR).</b>
+        </p>
+        <p>
+            SÜRECİN İŞLEYİŞİ:
+        </p>
+        <p>
+            Önçelikle evrakların tamamı eksiksiz bir şekilde Üniversite yetkilisine teslim edilmelidir. Hukuk işleri ofisimiz en baştan başlayarak aşağıda sıralayacağımız işlemleri yaparak, öğrencinin güvenli bir şekilde oturma izni / Kuzey Makedonya’da kimlik kartı ve lise diplomasına denklik almasını sağlayacaktır.
+        </p>
+        <p>
+            Kişi Kuzey Makedonya’ya giriş yapmadan önce bilgileri yetkili mercilere iletilerek, sorunsuz bir şekilde Ülkeye girişi sağlanmaktadır. En başta gelen bütün evrakları Hukuk ofisimiz, Makedonca diline tercüme edecektir. Tercüme işleminin bitiminden sonra aynı evraklar noter onayı için Notere gönderilir. Evrakların tercüme ve noter işlemlerinin bitmesinin ardından Bakanlık işlemleri devreye girer. Gelen bütün evraklar Üniversite’de arşivlenir bu işlem tamamlandıktan sonra aynı arşivleme Bakanlıklarda yapılmaktadır. Birinci aşamada kişi oturma iznin başvuru yapabilmesi için Kuzey Makedonya’da noter huruzunda en az 1 yıllık kıyılan kira sözleşmesinin evrak tesliminden en fazla 1 hafta sonra sözleşmeyi’de Hukuk ofisimize teslim etmelidir.
+        </p>
+        <p>
+            Hukuk ofisi yetkilileri en başta Türkiye’den lise diplomasının denkliğini alabilmek için öğrenci adına Kuzey Makedonya Eğitim ve Bilim Bakanlığına Denklik başvurusunda bulunur. (3 hafta içinde denklik kararı çıkarılır ve aynı şekilde yetkili kişi gidip tekrardan bütün evrakları ve denklik kararnamesini teslim alır). İkinci aşamada denklik kararnamesi veya başvurusu alındıktan sonra Üniversite iç organları tarafından bazı evrakalrın hazılanması sürecine girilir. Bu evrakaların hazırlanması sürecinden sonra Bütün evraklar yine Hukuk ofisimizde toplanarak, İç İşleri Bakanalığı ve Büyükelçilikler/ Konsolosluk birimlerine vize başvurusu için hazırlıklar başlar (Bu süreçte öğrenci imzalar için Hukuk Ofisimize çağırılır).
+        </p>
+        <p>
+            Yeni getirilen kanunda Başvurular Kuzey Makedonya’dan da yapılabilecek. Evraklar eksiksiz bir şekilde tamamlandığında ve hukuk işlerinde toplandığında öğrenci ile birlikte yada vekaletname ile Hukuk Ofisi yetkilileri Vize / oturma izni başvurusunda bulunur. Başvurular yapıldıktan sonra, Kuzey Makedonya’da idare sisteminin yavaş çalışmasından ötürü Üniversite’de Yetkili kişiler ciddi girişimlerde bulunarak vizenin sorunsuz bir şekilde çıkmasını sağlar ve işlemi sonuna kadar takip eder. Vizesi onaylanan öğrenci kararnameyi içişleri bakanlığı yada başvuru yaptığı Büyükelçilik / konsolosluk biriminden alır. Kararname alındıktan sonra kişi Hukuk ofisimiz ile durmadan irtibat sağlayarak koordineli bir şekilde bakanlığa giderek kimlik kartı için başvuruda bulunur ve fotoğraf çekinir. Başvurudan 3-4 hafta sonra kişi, Kuzey Makedonya’da oturma izni / kimlik kartı sahibi olur.    
+        </p>
+    </div>
+{% endblock content %}

@@ -1,8 +1,14 @@
 from django.db import models
 from django.urls import reverse
 from phonenumber_field.modelfields import PhoneNumberField
+from autoslug import AutoSlugField
 
 from .models_abstract import SingletonModel
+
+
+class Slide(models.Model):
+    image = models.ImageField(upload_to='slide/',verbose_name='Resim')
+
 
 class City(models.Model):
     name = models.CharField('',max_length=255)
@@ -23,6 +29,7 @@ class FAQ(models.Model):
 
 class Post(models.Model):
     title = models.CharField('Başlık',max_length=255)
+    slug = AutoSlugField(verbose_name='Slug',populate_from='title',unique=True)
     image = models.ImageField('Resim',upload_to='posts/')
     content = models.TextField('İçerik')
 
@@ -30,33 +37,26 @@ class Post(models.Model):
         verbose_name = 'Haber'
         verbose_name_plural = 'Haberler'
 
+    def get_absolute_url(self):
+        return reverse('university:post-detail',
+            args = [ self.slug ]
+        )
+
 
 class Area(models.Model):
     title = models.CharField('Başlık',max_length=255)
     price = models.IntegerField('Fiyat?')
-    continuance = models.IntegerField('Kaç Yıl?')
-    language = models.CharField('Dil',max_length=255)
+    language = models.CharField('Dil',max_length=255,default='Makedonca')
 
     class Meta:
         verbose_name = 'Bölüm'
         verbose_name_plural = 'Bölümler'
 
-
-class Faculty(models.Model):
-    title = models.CharField('Başlık',max_length=255)
-    image = models.ImageField('Resim',upload_to='faculties/')
-
-    areas = models.ManyToManyField(Area,verbose_name='Bölümler',related_name='areas')  
-
-    class Meta:
-        verbose_name = 'Fakülte'
-        verbose_name_plural = 'Fakülteler'
-
-    def get_absolute_url(self):
-        return reverse(
-            'university:faculty-detail',
-            args = [self.id]
-        )
+    def __repr__(self):
+        return self.title
+    
+    def __str__(self):
+        return f'<{self.title} - {self.price}€>'
 
     
 class Request(models.Model):

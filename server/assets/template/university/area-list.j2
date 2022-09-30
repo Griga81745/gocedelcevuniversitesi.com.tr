@@ -8,7 +8,7 @@
     <div class="page-title-area bg-1">
         <div class="container">
             <div class="page-title-content">
-                <h2>About</h2>
+                <h2>Fiyat Listesi</h2>
 
                 <ul>
                     <li>
@@ -17,10 +17,46 @@
                         </a>
                     </li>
 
-                    <li class="active">About</li>
+                    <li class="active">Fiyat Listesi</li>
                 </ul>
             </div>
         </div>
     </div>
     <!-- End Page Title Area -->
+    <div class="container my-5">
+        <a href="{% url 'university:request-create' %}" class="default-btn mb-5 w-100">
+            ÜCRETSİZ ONLINE KAYIT OL
+        </a>
+        <div style="overflow-x: scroll">
+            <table class="table" style="min-width:1000px">
+                <tr>
+                    <th>Bölüm Adı</th>
+                    <th>Hazırlık Eğitimi</th>
+                    <th>Fakülte Ücretleri</th>
+                    <th>Eğitim Dili</th>
+                </tr>
+                {% for area in object_list %}
+                    <tr>
+                        <td>
+                            {{area.title}}
+                        </td>
+                        <td>
+                            2250 €
+                            Hazırlık+Vize+Evrak+Dosya
+                            Hiz.Bedeli
+                        </td>
+                        <td>
+                            {{area.price}}
+                        </td>
+                        <td>
+                            {{area.language}}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <a href="{% url 'university:request-create' %}" class="default-btn mt-5 w-100">
+            ÜCRETSİZ ONLINE KAYIT OL
+        </a>
+    </div>
 {% endblock content %}

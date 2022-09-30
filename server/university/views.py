@@ -25,24 +25,19 @@ class FAQListView(generic.TemplateView):
     template_name = 'university/faq-list.j2'
 
 
-class PostListView(generic.TemplateView):
+class PostListView(generic.ListView):
+    model = models.Post
+    paginate_by = 3
     template_name = 'university/post-list.j2'
 
 
-class PostDetailView(generic.TemplateView):
+class PostDetailView(generic.DetailView):
+    model = models.Post
     template_name = 'university/post-detail.j2'
 
 
-class FacultyDetailView(generic.DetailView):
-    model = models.Faculty
-    template_name = 'university/faculty-detail.j2'
-
-
-class FacultyListView(generic.TemplateView):
-    template_name = 'university/faculty-list.j2'
-
-
-class AreaListView(generic.TemplateView):
+class AreaListView(generic.ListView):
+    model = models.Area
     template_name = 'university/area-list.j2'
 
 

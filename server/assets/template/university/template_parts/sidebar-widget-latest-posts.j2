@@ -1,0 +1,17 @@
+{% load custom_tags %}
+<div class="sidebar-widget recent-post">
+    <h3 class="widget-title">Son Haberler</h3>
+
+    <ul>
+        {% latest_posts as latest_posts %}
+        {% for post in latest_posts %}
+            <li>
+                <a href="{{ post.get_absolute_url }}">
+                    {{ post.title }}
+                    <img style="height:70px; width: 70px; object-fit: cover" src="{{ post.image.url }}" alt="Image">
+                </a>
+                <br><br>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
