@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
         <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         {% block style %}{% endblock style %}
         <title>
             {% block title %}{% endblock title %} - {% setting 'title' %}
@@ -33,6 +34,7 @@
         {% include 'origin/header.j2' %}
         {% block content %}{% endblock content %}
         {% include 'origin/footer.j2' %}
+        {% include "origin/template_parts/alert-popup.j2" with messages=messages %}
         <script src="{% static 'js/jquery.min.js' %}"></script>
         <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
         <script src="{% static 'js/meanmenu.min.js' %}"></script>

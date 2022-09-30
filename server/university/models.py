@@ -17,6 +17,12 @@ class City(models.Model):
         verbose_name = 'İl'
         verbose_name_plural = 'İller'
 
+    def __repr__(self):
+        return self.name
+    
+    def __str__(self):
+        return f'{self.name}'
+
 
 class FAQ(models.Model):
     title = models.CharField('Soru',max_length=255)
@@ -56,7 +62,7 @@ class Area(models.Model):
         return self.title
     
     def __str__(self):
-        return f'<{self.title} - {self.price}€>'
+        return f'{self.title} - {self.price}€'
 
     
 class Request(models.Model):
@@ -73,9 +79,16 @@ class Request(models.Model):
         verbose_name = 'Başvuru'
         verbose_name_plural = 'Başvurular'
 
+    def __repr__(self):
+        return self.name
+    
+    def __str__(self):
+        return f'{self.name} ({self.area})'
+
 
 class SiteSettings(SingletonModel):
     title = models.CharField('Site Başlığı',max_length=255,blank=True,null=True)
+    description = models.TextField('Site Açıklaması',default='',blank=True,null=True)
     logo = models.ImageField('Logotip',upload_to='logo/',blank=True,null=True)
     support_phone = PhoneNumberField('Destek Numarası',blank=True,null=True)
     support_email = models.EmailField('Destek E-Postası',blank=True,null=True)

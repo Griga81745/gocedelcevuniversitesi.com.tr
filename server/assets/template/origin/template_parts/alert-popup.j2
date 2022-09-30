@@ -1,0 +1,7 @@
+<script>
+    {% if messages %}
+        {% for message in messages %}
+            swal("{{message}}", "You clicked the button!", "success");
+        {% endfor %}
+    {% endif %}
+</script>
